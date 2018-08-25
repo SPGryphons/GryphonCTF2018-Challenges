@@ -1,11 +1,14 @@
 #!/usr/bin/env python3
+'''
+Requires openssl
+'''
 import subprocess, sys
 
 if len(sys.argv) != 2:
     print('Usage: {} <ciphertext>'.format(sys.argv[0]))
     exit()
 
-for i in range(1,16384):
+for i in range(1,16385):
     binary = format(i, '014b')
     l = binary[:7] + '0'
     r = binary[7:] + '0'
