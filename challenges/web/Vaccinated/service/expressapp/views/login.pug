@@ -1,0 +1,15 @@
+extends layout
+
+block content
+    form.form-signin(method='POST' action='/')
+      img.mb-4(src='../../assets/brand/bootstrap-solid.svg', alt='', width='72', height='72')
+      i.fas.fa-syringe(style='font-size: 12em;margin-bottom: 20px;')
+      h1.h3.mb-3.font-weight-normal Please sign in
+      label.sr-only(for='username') Email address
+      input#username.form-control(placeholder='Username', required, autofocus, type='username', name='username')
+      label.sr-only(for='pw') Password
+      input#pw.form-control(placeholder='Password', required, type='password', name='password')
+      button.btn.btn-lg.btn-primary.btn-block(type='submit') Sign in
+      if failed == true
+            p.mt-5.mb-3(style='color: red') You have entered an invalid Username/Password
+      p.mt-5.mb-3.text-muted © 2017-2018

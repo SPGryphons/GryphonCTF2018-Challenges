@@ -1,0 +1,27 @@
+version: "2"
+services:
+  expressapp:
+    image: vaccinated_express
+    container_name: web-vaccinated_express
+    restart: always
+    build:
+        context: expressapp
+    ports:
+      - "3000:3000"
+    depends_on:
+      - mongo
+    mem_limit: 128m
+
+  mongo:
+    image: vaccinated_mongo
+    container_name: web-vaccinated_mongo
+    restart: always
+    build:
+        context: mongo
+    environment:
+        MONGO_INITDB_ROOT_USERNAME: mongoadmin
+        MONGO_INITDB_ROOT_PASSWORD: oAKzFPFRCXTXoRSAKe
+        MONGO_INITDB_DATABASE: mydb
+    expose:
+      - "27017"
+    mem_limit: 128m
