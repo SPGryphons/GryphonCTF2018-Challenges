@@ -1,21 +1,21 @@
 FROM alpine
 
 # standard stuff
-RUN apk update \
+RUN apk update && \
     apk upgrade
 
 # required packages & dependencies
-RUN apk add python3 uwsgi
+RUN apk add python3 uwsgi uwsgi-python3
 COPY requirements.txt ./
 RUN python3 -m pip install -r requirements.txt
 
-# switch user
-RUN adduser -D www-data
-USER www-data
-WORKDIR /home/www-data
+# add user
+RUN adduser -s /sbin/nologin -D www-data
 
-# copy stuff in home dir
-COPY sanity-hungry/ ./
-WORKDIR /home/www-data/sanity-hungry
+# permissions etc...
+WORKDIR /var/www/html
+COPY sanity-hungry/ /var/www/html/sanity-hungry
+WORKDIR /var/www/html/sanity-hungry
+RUN chown -R www-data:www-data .
 
-CMD ["uwsgi", "--socket", "0.0.0.0:5000", "--protocol=http", "-w", "wsgi:app"]
+CMD ["uwsgi", "--ini", "sanity-hungry.ini"]
