@@ -8,7 +8,7 @@ I am lost in a vast forest, find me!
 
 ## Setup Guide
 1. Run the generate program.
-2. Open a random file and change the contents to contain the flag.
+2. Open a file `521` and change the contents to contain the flag.
 
 ## Distribution
 - forest.zip
