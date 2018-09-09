@@ -42,9 +42,9 @@ This part actually does nothing as the for loop will not run because a has no le
 The last part of the function does some bitwise operations on each byte of the input key.
 
 1. left shift by 1
-2. xor with 0x12
+2. xor with `0x12`
 3. right shift by 1
-4. xor with 0xA1
+4. xor with `0xA1`
 
 Then it compares the result with the stored values, if they are the same then the flag is valid.
 
