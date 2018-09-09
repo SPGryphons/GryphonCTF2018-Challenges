@@ -12,7 +12,7 @@ I am lost in a vast forest, find me!
 
 ## Distribution
 - forest.zip
-    - SHA1: `dc12818c72f176bf8c2b50b08401b410b16ab467`
+    - SHA1: `1753b54b9b11e9beb3044d8efbae47ec09dced63`
     - A zipped file containing 1000 files.
 
 ## Solution
