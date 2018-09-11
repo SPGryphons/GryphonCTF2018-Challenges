@@ -21,17 +21,12 @@ The first one is a little easy eh? Well, this time, its a little dar-harder.
 For our purpose, we searched for `wild` on [Pexel](https://www.pexel.com)
 
 ## Distribution
-- images-1.zip
-    - SHA1: `77c0fcd20c65f71770472b4b437134da829a98c8`
-- images-2.zip
-    - SHA1: `7a261c33193b9a1176cb5c5054ca5a2520799567`
-- images-3.zip
-    - SHA1: `9232dc31e1825bf555ad8d52aaaf4947452799b0`
-- images-4.zip
-    - SHA1: `2f286853fcac3c39795f576c74daa99372e97a5f`
+- images.zip
+    - SHA1: `e0ddada54e0d8183f32da0b77e20007d71d7ac42`
+    - File containing 1000 images :)
 
 ## Solution
-In the zipped file, there are a total of 250 images. Within the 250 images, the flags are hidden in 4 of the images. Using the naked eye, it is unlikely that one will see the hidden flag, so we need a little help.
+In the zipped file, there are a total of 1000 images. Within the 1000 images, the flags are hidden in 7 of the images. Using the naked eye, it is unlikely that one will see the hidden flag, so we need a little help.
 
 Since the hint says that the flag is black, taken literally, a [script](solution/filter.py) can be programmed to filter the pixels in the images and only show the parts which are black. Thereafter, opening the first image, `1.jpg`, we will see that the image contains part of the flag.
 
@@ -42,12 +37,12 @@ While the OCR wouldn't give perfect results due to compression done on the image
 
 Images containing flags are:
 - 1.jpg
-- 96.jpg
-- 308.jpg
-- 416.jpg
-- 480.jpg
-- 654.jpg
-- 823.jpg
+- 113.jpg
+- 346.jpg
+- 473.jpg
+- 539.jpg
+- 721.jpg
+- 905.jpg
 
 ### Flag
 `GCTF{0CR_15_4MAZING_T0_PL4Y_W1TH}`

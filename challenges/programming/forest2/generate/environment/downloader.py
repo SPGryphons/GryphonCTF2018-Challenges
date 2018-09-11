@@ -1,6 +1,7 @@
+from config import USER_AGENT
+from config import IMAGE_SAVE_LOCATION
 from ocr import image_valid
 from queue import Queue
-from script import IMAGE_SAVE_LOCATION
 from threading import Lock
 from threading import Thread
 from urllib.request import Request
@@ -8,13 +9,12 @@ from pytesseract import TesseractError
 import urllib
 import os
 
-USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36"
 VALID_LINKS_LOCK = Lock()
 VALID_LINKS = []
 DOWNLOAD_COUNT_LOCK = Lock()
 DOWNLOAD_COUNT = 1
 
-class DownloaderWorker(Thread):
+class Downloader(Thread):
     def __init__(self, queue):
         Thread.__init__(self)
         self.queue = queue

@@ -1,7 +1,6 @@
+from config import IMAGE_SAVE_LOCATION
 import os
 import time
-
-IMAGE_SAVE_LOCATION = ".." + os.sep + ".." + os.sep + "distrib" + os.sep + "images"
 
 def main():
     dir_files = os.listdir(IMAGE_SAVE_LOCATION)
