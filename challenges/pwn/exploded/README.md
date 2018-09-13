@@ -1,4 +1,4 @@
-lcd # Challenge Name
+# Challenge Name
 
 ## Exploded
 
