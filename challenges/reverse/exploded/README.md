@@ -24,7 +24,7 @@ Using GDB, disassembling the main method will give the follow output will tell u
 Knowing this, we can thus attempt to exploit `scanf()` since it is vulnerable to buffer overflow exploits.
 
 Using `info functions` in GDB, we can list all the functions as shown below:
-```
+```asm
 (gdb) info functions
 Non-debugging symbols:
 0x00005555555546d8  _init
@@ -57,7 +57,7 @@ Recalling the previously disassembled `doStuff` method, in the disassembly, we w
 Taking into account that the rbp is 8 bytes, we would need to write a total of 56 bytes before we can override the return address to run the interestingFunction.
 
 Disassembling the `interestingFunction` method, we will see the following output:
-```
+```asm
 Dump of assembler code for function interestingFunction:
    0x0000555555554947 <+0>:	push   %rbp
    0x0000555555554948 <+1>:	mov    %rsp,%rbp
