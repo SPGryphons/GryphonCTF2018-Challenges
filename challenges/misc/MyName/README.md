@@ -40,13 +40,6 @@ These hints are in index.jsp as well
 2. Set up this challenge
 3. On our play server
 
-## Distribution
-- filename1.txt
-    - SHA1: `SHA1 Hash here`
-    - Any additional description (Optional)
-- filename2.txt
-    - SHA1: `SHA1 Hash here`
-    - Any additional description (Optional)
 
 ## Solution
 	
