@@ -2,6 +2,28 @@
 
 ## Question Text
 
+Everybody
+Has a name
+Some are different 
+Some the same 
+Some are short 
+Some are long
+All are right
+None are wrong 
+I like my name 
+It's special to me 
+It's exactly who I want to be!
+What's my name?
+
+
+*Creator - Va1aR (Joshua)
+
+
+## Setup Guide
+1. Run `./build.sh` in the service directory.
+
+## Solution
+	
 This challenge requires the user to figure out the person's name correctly
 After entering the correct name, they will be able to retrive the flag
 
@@ -24,21 +46,6 @@ The user can choose to look at hints if they feel that the task is too challengi
 There are hints in index.jsp itself
 Each hint displays an image as well as some text.
 
-
-*Creator - Va1aR (Joshua)
-
-### Hints 
-
-These hints are in index.jsp as well
-
-1. What is this popular youtube channel?
-2. What game is this?
-3. What is this?
-
-## Setup Guide
-1. Run `./build.sh` in the service directory.
-
-## Solution
 	
 1. User must download and save the wordsearch png file
 2. User must open the saved png file with Notepad
