@@ -16,7 +16,7 @@ It's exactly who I want to be!
 What's my name?
 
 
-*Creator - Va1aR (Joshua)
+*Creator - Va1aR (Joshua)*
 
 
 ## Setup Guide
