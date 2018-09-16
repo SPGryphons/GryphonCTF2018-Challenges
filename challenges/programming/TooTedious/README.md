@@ -15,6 +15,7 @@ Do your best to find the flag.
 
 ## Distribution
 - CardNumbers.png
+    - SHA1: `E709BD09DC8A79773173D957235CA393FE622D77`
     - An Image of all 30 encrypted cards
 
 ## Solution
