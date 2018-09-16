@@ -11,6 +11,4 @@ COPY --chown=exploded:exploded exploded .
 RUN chmod u+x exploded
 
 # configure server
-COPY 01-disable-aslr.conf /etc/sysctl.d/
 COPY exploded.conf /etc/xinetd.d/exploded
-
