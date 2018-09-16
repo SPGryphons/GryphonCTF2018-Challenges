@@ -14,7 +14,7 @@ Slove the ciphertext and the flag shall be yours.
 ## Distribution
 - Cipher.jpg
     - SHA1: `604F92062A82850189680C7FD4A705C431B876EC`
-    - Contains 30 lines of text, once of which is the flag
+    - Contains encryted text of the flag
 
 ## Solution
 Pigpen cipher is a mono-alphabetic substitution cipher. It exchanges letters for symbols.
