@@ -1,6 +1,6 @@
-# Challenge Name
+# Exploded
 
-## Exploded
+## Question Text
 
 Here's a program that I made. Seems like it works the way I want it to.
 
