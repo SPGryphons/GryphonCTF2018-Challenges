@@ -11,3 +11,5 @@ RUN chmod u+x exploded
 
 # configure server
 COPY exploded.conf /etc/xinetd.d/exploded
+
+CMD ["xinetd", "-d"]
