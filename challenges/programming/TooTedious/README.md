@@ -21,9 +21,9 @@ Do your best to find the flag.
 ## Solution
 Optical Character Recognition aka OCR is a widely used technology that translate text in images into machine readable text.
 
-Instead of typing each letter out manually,we can use OCR to convert the card numbers into machine readable text.
+Instead of typing each letter out manually,use OCR(online/offline) software to translate the card numbers into machine readable text.
 
-All the card numbers are encrypted with a simple caeser shift of 8 and can be decrypted the same way. 
+Decrypt all the card numbers with a ceaser shift of 8 to find the flag.
 
 ### Flag
 `GCTF{COMPU73R_3Y3}`
