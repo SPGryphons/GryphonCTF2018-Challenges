@@ -4,7 +4,7 @@
 
 This challenge is quite straightforward.
 
-Slove the ciphertext and the flag shall be yours.
+Solve the ciphertext and the flag shall be yours.
 
 *Creator - kon8387*
 
