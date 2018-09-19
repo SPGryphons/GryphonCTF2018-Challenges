@@ -13,4 +13,7 @@ Something about the start and end of the image looks off don't you think?
 cinnamonroll.jpg
 
 ## Solution
-The file is a JFIF image and the Start of Image, End of Image markers and JFIF identifiers have been replaced by 00 . Use a hex editor and add FF D8 and FF D9 for the SOI and EOI markers and replace the 4A 00 00 00 to 4A 46 49 46 near the start, which is the JFIF identifiers and the flag can be found in the bottom right of the image
+The file is a JFIF image and the Start of Image, End of Image markers have been replaced by 00. Use a hex editor and add FF D8 and FF D9 for the SOI and EOI markers and the flag can be found in the bottom right of the image
+
+## Flag
+GCTF{Jp3G_1S_t00_Ea5y_4_u}
