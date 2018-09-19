@@ -32,6 +32,8 @@ void vuln(){
 }
 ```
 
+Since the binary compiled with a non-executable stack, we cannot simply inject shellcode and jump to it. Instead we have to use a technique called return to libc.
+
 The following prints the address of the LIBC object `_IO_2_1_stdin_`
 ```c
     printf("Here is your leaked LIBC address\nstdin: %p\n", stdin);
