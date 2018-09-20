@@ -10,7 +10,7 @@ I found a pillow in the bin too
 
 ## Distribution
 * [trash.png](distrib/trash.png)
-  * SHA-1: 1B7854E89582E6010500229DFB3A91F593DCB75F
+  * SHA-1: `1B7854E89582E6010500229DFB3A91F593DCB75F`
 
 ## Solution
 * [solve.py](solution/solve.py)
