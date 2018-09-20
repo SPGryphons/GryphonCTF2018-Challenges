@@ -23,7 +23,7 @@ What's my name?
 
 ## Solution
 	
-This challenge requires the user to figure out the person's name correctly
+This challenge requires the user to figure out the person's name correctly  
 After entering the correct name, they will be able to retrive the flag
 
 The user will see a wordsearch image when they are at index.jsp
