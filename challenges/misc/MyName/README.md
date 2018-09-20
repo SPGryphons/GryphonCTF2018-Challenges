@@ -28,12 +28,12 @@ After entering the correct name, they will be able to retrive the flag
 
 The user will see a wordsearch image when they are at index.jsp
 
-They will also see:
-"What is my name?"
+They will also see:  
+"What is my name?"  
 "Enter my name to get the flag"
 
-The wordsearch image contains the numbers: 0,14,14 
-on the top left, top right, and bottom left corners respectively
+The wordsearch image contains the numbers: 0,14,14  
+on the top left, top right, and bottom left corners respectively  
 These refer to "coordinates" of letters in the wordsearch image
 
 With the help of the wordsearch image, the user must figure out the person's name.
@@ -42,7 +42,7 @@ After figuring out the name, the user must enter the name to retrieve the flag
 
 The user can choose to look at hints if they feel that the task is too challenging
 
-There are hints in index.jsp itself
+There are hints in index.jsp itself  
 Each hint displays an image as well as some text.
 
 	
