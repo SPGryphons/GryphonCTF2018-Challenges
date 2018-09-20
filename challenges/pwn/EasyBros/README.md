@@ -6,6 +6,9 @@ I turned off all protections just for you!
 
 *Creator - PotatoDrug*
 
+### Hints (Optional)
+1. Check the heap
+
 ## Setup Guide
 1. Run `./build.sh`
 
