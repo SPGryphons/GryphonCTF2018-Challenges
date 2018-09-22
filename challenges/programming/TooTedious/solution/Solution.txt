@@ -1,3 +1,0 @@
-Use OCR(online/offline) software to translate the card numbers into machine readable text.
-
-Decrypt all the card numbers with a ceaser shift of 8.
