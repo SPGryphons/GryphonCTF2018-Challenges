@@ -5,8 +5,8 @@
 There seems to be some hidden files within the .rar. Hmmmm Where could they be?.
 
 ### Disclaimer
-Use Microsoft OS(Windows 7 or higher).
-Filesystem of OS must be NTFS.
+Use Microsoft OS(Windows 7 or higher), 
+Filesystem of OS must be NTFS, 
 Use winrar to extract the contents.
 
 *Creator - kon8387*
@@ -24,10 +24,11 @@ Use winrar to extract the contents.
 Alternate Data stream in the NTFS file system allows you to store data in a seperate stream "behind" any filename. Hence the name Alternate Data Stream or ADS. This makes it hard to detect hidden files using normal methods.
 
 1. Open a command prompt.
-2. To detect the files first type in 'dir /r /*fullpath to extracted folder*'.
-3. You should be see a bunch of hidden files including the ':flag.txt' file.
-4. To view the contents of the file we can use the command 'notepad folder:flag.txt' (Include the full pathname to the folder if your not in the same directory).
-5. A notepad containing the flag should show up.
+2. To detect the files first type in "dir /r *fullpath to extracted folder*".
+3. You should be see a bunch of hidden files including the `:flag.txt` file.
+4. The `:flag.txt` is located behind the folder named file.
+5. To view the contents of the `:flag.txt` file we can use the command "notepad folder:flag.txt" (Include the full pathname to the folder if your not in the same directory).
+6. A notepad containing the flag should show up.
 
 
 
