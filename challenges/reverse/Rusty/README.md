@@ -7,8 +7,7 @@ I am quite rusty with this :(
 *Creator - PotatoDrug*
 
 ### Hints (Optional)
-1. Find the interesting function
-2. Check the data section
+1. The program is written in rust
 
 ## Setup Guide
 1. Run `./build.sh`
@@ -21,7 +20,7 @@ I am quite rusty with this :(
 ## Solution
 
 When we run the program it asks us for the password, so we have to find out what is the correct password.
-```bash
+```
 > ./distrib/rusty 
 Password > asd
 No flags for you!
@@ -34,9 +33,9 @@ Firstly we have to find the main function, if we list all functions and grep for
 ```
 
 While looking through the main function we find this interesting bit.
-![alt text][solution/disasm.png]
+![alt text](solution/disasm.png)
 
-Important thing to note
+**Important Note**
 > In Rust a ‘string’ is a sequence of Unicode scalar values encoded as a stream of UTF-8 bytes. All strings are guaranteed to be a valid encoding of UTF-8 sequences. Additionally, unlike some systems languages, strings are not null-terminated and can contain null bytes.
 
 We see a string being loaded and passed to a function named `rot13`. Then there is a string comparision, so it is likely that our input is being compared to the rot13 of this string. 
