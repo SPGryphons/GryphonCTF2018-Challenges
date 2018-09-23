@@ -2,7 +2,7 @@
 
 ## Question Text
 
-I cant seem to make sense of this file I recieved. Please help!
+I cant seem to make sense of this file I received. Please help!
 
 *Creator - PotatoDrug*
 

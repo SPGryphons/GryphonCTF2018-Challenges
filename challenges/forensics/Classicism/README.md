@@ -2,7 +2,7 @@
 
 ## Question Text
 
-I cant't really appreciate old paintings, can you?
+I can't really appreciate old paintings, can you?
 
 *Creator - PotatoDrug*
 
