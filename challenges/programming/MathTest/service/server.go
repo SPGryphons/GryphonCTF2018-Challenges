@@ -57,7 +57,8 @@ OUTERLOOP:
 		}
 
 		// append magic
-		var intermediate = append(localSum[:position-1], strconv.FormatFloat(num1+num2, 'f', decimalPrecision, floatBitSize))
+		var intermediate = append(localSum[:position-1],
+			strconv.FormatFloat(num1+num2, 'f', decimalPrecision, floatBitSize))
 		localSum = append(intermediate, localSum[position+2:]...)
 	}
 
@@ -98,7 +99,8 @@ OUTERLOOP:
 		}
 
 		// append magic
-		var intermediate = append(localSum[:position-1], strconv.FormatFloat(num1+num2, 'f', decimalPrecision, floatBitSize))
+		var intermediate = append(localSum[:position-1],
+			strconv.FormatFloat(num1+num2, 'f', decimalPrecision, floatBitSize))
 		localSum = append(intermediate, localSum[position+2:]...)
 	}
 
@@ -139,7 +141,8 @@ OUTERLOOP:
 		}
 
 		// append magic
-		var intermediate = append(localSum[:position-1], strconv.FormatFloat(num1*num2, 'f', decimalPrecision, floatBitSize))
+		var intermediate = append(localSum[:position-1],
+			strconv.FormatFloat(num1*num2, 'f', decimalPrecision, floatBitSize))
 		localSum = append(intermediate, localSum[position+2:]...)
 	}
 
@@ -180,7 +183,8 @@ OUTERLOOP:
 		}
 
 		// append magic
-		var intermediate = append(localSum[:position-1], strconv.FormatFloat(num1/num2, 'f', decimalPrecision, floatBitSize))
+		var intermediate = append(localSum[:position-1],
+			strconv.FormatFloat(num1/num2, 'f', decimalPrecision, floatBitSize))
 		localSum = append(intermediate, localSum[position+2:]...)
 	}
 
