@@ -5,20 +5,19 @@ import (
 	"bytes"
 	"fmt"
 	"log"
-	"math/rand"
 	"net"
+	"regexp"
 	"strconv"
 	"strings"
-	"time"
 )
 
-// timeoutDuration states how many seconds participants
-// should be given to answer question
-var timeoutDuration time.Duration = 3
+// Connection stuff
+var host = "127.0.0.1"
+var port = ":8000"
+
 var floatBitSize = 64
 var decimalPrecision = -1
 
-// mathParser parses math strings
 type problemSum struct {
 	sum   string
 	state []string
@@ -192,49 +191,21 @@ OUTERLOOP:
 	return true
 }
 
-func getProblemSum() problemSum {
-	var length = getNumberInRange(3, 10)
-
-	var sum string
-	for ; length > 0; length-- {
-		sum += strconv.Itoa(getNumberInRange(1, 15)) + " "
-
-		if length != 1 {
-			sum += getSign() + " "
-		}
-	}
-
-	var problemSum problemSum
-	problemSum.sum = strings.TrimSpace(sum)
-	problemSum.state = strings.Split(problemSum.sum, " ")
-
-	return problemSum
-}
-
-func getSign() string {
-	var sign = []string{"+", "-", "*", "/"}
-	return sign[getNumberInRange(0, 3)]
-}
-
-func getNumberInRange(min int, max int) int {
-	return rand.Intn(max-min+1) + min
-}
-
-func clientWrite(client net.Conn, data string) bool {
-	length, err := fmt.Fprintf(client, data)
+func writeStream(server net.Conn, data string) bool {
+	length, err := fmt.Fprintf(server, data)
 	return err == nil && length == len(data)
 }
 
-func clientRead(client net.Conn) (string, bool) {
+func readStream(server net.Conn, delim string) (string, bool) {
 	var (
 		full     bytes.Buffer
 		success  = false
 		buffer   = make([]byte, 1024)
-		clientIn = bufio.NewReader(client)
+		serverIn = bufio.NewReader(server)
 	)
 
 	for {
-		length, err := clientIn.Read(buffer)
+		length, err := serverIn.Read(buffer)
 		if err != nil {
 			return "", success
 		}
@@ -242,7 +213,7 @@ func clientRead(client net.Conn) (string, bool) {
 		full.Grow(length)
 		full.Write(buffer[:length])
 
-		if strings.HasSuffix(full.String(), "\n") {
+		if strings.HasSuffix(full.String(), delim) {
 			success = true
 			break
 		}
@@ -251,125 +222,61 @@ func clientRead(client net.Conn) (string, bool) {
 	return strings.TrimSpace(full.String()), success
 }
 
-func clientReadTimeout(client net.Conn) (string, bool) {
-	var (
-		full     bytes.Buffer
-		success  = false
-		buffer   = make([]byte, 1024)
-		clientIn = bufio.NewReader(client)
-	)
+func main() {
+	var regPat = regexp.MustCompile("Sum: (.*)\\nAnswer:")
+	server, err := net.Dial("tcp", host+port)
+	fmt.Println("Connected!")
+	defer server.Close()
 
-	client.SetReadDeadline(time.Now().Add(time.Second * timeoutDuration))
-
-	for {
-		length, err := clientIn.Read(buffer)
-		if err != nil {
-			if nerr, ok := err.(net.Error); ok && nerr.Timeout() {
-				_ = clientWrite(client, "\n\nOpps, too slow :(\n")
-			}
-
-			return "", success
-		}
-
-		full.Grow(length)
-		full.Write(buffer[:length])
-
-		if strings.HasSuffix(full.String(), "\n") {
-			success = true
-			break
-		}
-	}
-
-	return strings.TrimSpace(full.String()), success
-}
-
-func connectionHandler(client net.Conn) {
-	// var message string
-	defer client.Close()
-	defer log.Println("Client disconnected from", client.RemoteAddr().String())
-
-	var welcomeMessage = "============================ Math Test ============================\n" +
-		"Welcome to the VSA\n" +
-		"This math test is pretty simple\n" +
-		"There are a total of 100 questions\n" +
-		"Leave your answers in 25 decimal places where decimals are required\n" +
-		"Oh, and you have 3 seconds for each question\n" +
-		"\nLet's go! "
-
-	clientWrite(client, welcomeMessage)
-
-	// For blocking purposes only
-	_, success := clientRead(client)
-	if !success {
+	if err != nil {
+		log.Fatalln("Ded :(")
 		return
 	}
 
-	var complete = false
+	receive, success := readStream(server, "Let's go! ")
+	if !success {
+		log.Fatalln("Ded :(")
+		return
+	}
+
+	writeStream(server, "\n")
+
 	for i := 0; i < 100; i++ {
-		var problemSum = getProblemSum()
+		receive, success := readStream(server, "Answer: ")
+		if !success {
+			log.Fatalln("Ded 1 :(")
+			return
+		}
+
+		var problemSum problemSum
+
+		sum := regPat.FindStringSubmatch(receive)
+		problemSum.sum = sum[1]
+		problemSum.state = strings.Split(problemSum.sum, " ")
 		problemSum.add()
 		problemSum.multiply()
 		problemSum.subtract()
 		problemSum.divide()
 
 		answer, err := strconv.ParseFloat(problemSum.state[0], floatBitSize)
+		ansString := strconv.FormatFloat(answer, 'f', 25, floatBitSize)
 		if err != nil {
-			log.Fatalln("Line 246 (Own Answer):", err)
+			log.Fatalln("Own Answer:", ansString, "\nSum:", receive)
 		}
 
-		success := clientWrite(client, "Sum: "+problemSum.sum+"\nAnswer: ")
+		success = writeStream(server, ansString+"\n")
 		if !success {
-			complete = false
-			break
+			log.Fatalln("Ded, server doesn't like me - writing failed :(")
+			return
 		}
 
-		// Parse and check answer
-		receive, success := clientReadTimeout(client)
-		if !success {
-			complete = false
-			break
-		}
-
-		userAnswer, err := strconv.ParseFloat(receive, floatBitSize)
-		if err != nil {
-			log.Println("Line 265:", err)
-		}
-
-		if userAnswer != answer {
-			clientWrite(client, "\nWell, that was a good attempt, but the anwer was "+
-				strconv.FormatFloat(answer, 'f', -1, floatBitSize)+
-				"\n")
-			complete = false
-			break
-		}
-		complete = true
+		fmt.Printf("Completed Sum %d: %s\nAnswer: %s\n\n", i+1, problemSum.sum, ansString)
 	}
 
-	if complete {
-		clientWrite(client, "Not bad, you're GCTF{G00D_4T_M47H}\n")
-	}
-}
-
-func main() {
-	// seed random first
-	rand.Seed(time.Now().Unix())
-
-	server, err := net.Listen("tcp4", ":8000")
-	defer server.Close()
-
-	if err != nil {
-		log.Fatalln("Could not listen on", server.Addr().String())
+	receive, success = readStream(server, "\n")
+	if !success {
+		log.Fatalln("Doesn't like me")
 	}
 
-	fmt.Println("Server started listening on", server.Addr().String())
-
-	for {
-		client, err := server.Accept()
-		if err != nil {
-			log.Println("Client connection error from", client.RemoteAddr().String())
-		}
-
-		log.Println("Client connection from", client.RemoteAddr().String())
-		go connectionHandler(client)
-	}
+	fmt.Println(receive)
 }
