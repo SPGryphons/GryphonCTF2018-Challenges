@@ -17,7 +17,7 @@ Upon connecting to the service using telnet or netcat, one can start solving the
 
 The service program does not follow the conventional PEMDAS order of operations. One will need to figure out the order of operation used, and program a script to solve the challenge. Especially since only 3 seconds is given for each question.
 
-Suggested Solution: [solution.go](../solution/solution.go)
+Suggested Solution: [solution.go](solution/solution.go)
 
 ### Flag
 `GCTF{G00D_4T_M47H}`
