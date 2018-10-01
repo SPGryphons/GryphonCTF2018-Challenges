@@ -2,7 +2,7 @@
 
 ## Question Text
 
-Is this what ailen language looks like?
+Is this what alien language looks like?
 
 *Creator - PotatoDrug*
 

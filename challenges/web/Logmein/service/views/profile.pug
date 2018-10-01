@@ -1,0 +1,54 @@
+extends layout
+
+block content
+  style
+      include profile.css
+  .container
+    .row.profile
+      .col-md-3
+        .profile-sidebar
+          // SIDEBAR USERPIC
+          .profile-userpic
+            img.img-responsive(src='http://keenthemes.com/preview/metronic/theme/assets/admin/pages/media/profile/profile_user.jpg', alt='')
+          // END SIDEBAR USERPIC
+          // SIDEBAR USER TITLE
+          .profile-usertitle
+            .profile-usertitle-name
+              | #{name}
+            .profile-usertitle-job
+              | #{title}
+          // END SIDEBAR USER TITLE
+          // SIDEBAR BUTTONS
+          .profile-userbuttons
+            button.btn.btn-success.btn-sm(type='button') Follow
+            button.btn.btn-danger.btn-sm(type='button') Message
+          // END SIDEBAR BUTTONS
+          // SIDEBAR MENU
+          .profile-usermenu
+            ul.nav
+              li.active
+                a(href='#')
+                  i.glyphicon.glyphicon-home
+                  |               Overview
+              li
+                a(href='#')
+                  i.glyphicon.glyphicon-user
+                  |               Account Settings
+              li
+                a(href='#', target='_blank')
+                  i.glyphicon.glyphicon-ok
+                  |               Tasks
+              li
+                a(href='#')
+                  i.glyphicon.glyphicon-flag
+                  |               Help
+          // END MENU
+      .col-md-9
+        .profile-content
+          | #{message}
+  center
+    strong
+      | Powered by 
+      a(href='http://j.mp/metronictheme', target='_blank') KeenThemes
+  br
+  br

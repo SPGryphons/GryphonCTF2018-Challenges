@@ -2,7 +2,7 @@
 
 ## Question Text
 
-Analyzing a virtual disk is more convinent than a physical disk
+Analyzing a virtual disk is more convenient than a physical disk
 
 *Creator - PotatoDrug*
 
