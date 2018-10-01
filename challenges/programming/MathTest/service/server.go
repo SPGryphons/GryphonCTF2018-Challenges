@@ -336,7 +336,7 @@ func connectionHandler(client net.Conn) {
 		}
 
 		if userAnswer != answer {
-			clientWrite(client, "\nWell, that was a good attempt, but the anwer was "+
+			clientWrite(client, "\nWell, that was a good attempt, but the answer was "+
 				strconv.FormatFloat(answer, 'f', -1, floatBitSize)+
 				"\n")
 			complete = false
