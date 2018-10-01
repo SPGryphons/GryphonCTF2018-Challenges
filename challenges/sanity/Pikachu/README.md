@@ -22,7 +22,7 @@ I choose you!
 
 ## Hint
 * Pikachu  
-  * SHA-1: af202890dcefa85df420f8d1b09f1349b3797db6
+  * SHA1: af202890dcefa85df420f8d1b09f1349b3797db6
 
 ## Distribution
 Pikachu.txt
