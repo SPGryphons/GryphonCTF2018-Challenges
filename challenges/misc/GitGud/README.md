@@ -21,7 +21,7 @@ I am a fan of taking notes, are you?
 
 
 ## Solution
-
+1. Search for the repository first on Github using the challenge name 'Git Gud'
 1. Clone the repository
 2. Change directory to the repository and run `git fetch origin "refs/notes/*:refs/notes/*"` to fetch notes from the repository
 3. Use `git log --show-notes="*"` or `git log --show-notes="*"` to get the flag
