@@ -16,3 +16,6 @@ I am a fan of taking notes, are you?
 2. Clone the repository
 3. Change directory to the repository and run `git fetch origin "refs/notes/*:refs/notes/*"` to fetch notes from the repository
 4. Use `git log --show-notes="*"` or `git log --show-notes="*"` to get the flag
+
+### Flag
+`GCTF{G1t_15_fUn_1F_Y0U_Kn0W}`
