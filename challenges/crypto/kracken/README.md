@@ -8,7 +8,7 @@ The Kracken is growing restless
 
 ## Distribution
 - kraken.zip
-    - SHA1: `31ff0557953c181b6309c44e773bb69a066158ee`
+    - SHA1: `6fce079efb841c12a0d16076f5bcdee4fe0eabc5`
 
 ## Solution
 The file is zip using the classic Linux `zip` utility. It is vulnerable to a known plaintext attack known as `pkcrack`.
