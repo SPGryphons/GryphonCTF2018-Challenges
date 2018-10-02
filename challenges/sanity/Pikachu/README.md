@@ -21,7 +21,7 @@ I choose you!
 *Creator - Va1aR* 
 
 ## Hint
-* Pikachu  
+* Pikachu.txt
   * SHA1: AF202890DCEFA85DF420F8D1B09F1349B3797DB6
 
 ## Distribution
