@@ -21,11 +21,11 @@ I choose you!
 *Creator - Va1aR* 
 
 ## Hint
-* Pikachu.txt
-  * SHA1: b3e97dfe6c30a19ea92010ae9e551aa30b71bf47
+* Pikachu
 
 ## Distribution
-Pikachu.txt
+* Pikachu.txt
+  * SHA1: b3e97dfe6c30a19ea92010ae9e551aa30b71bf47
 
 ## Solution
 Go to the following link:  
