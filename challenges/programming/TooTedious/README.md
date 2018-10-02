@@ -9,8 +9,10 @@ However it seems like they are encrypted.
 Do your best to find the flag.
 
 ## Disclaimer
-There are no spaces in the flag
-All letters of the flag must be entered in caps
+
+There are no spaces in the flag.
+
+All letters of the flag must be entered in caps.
 
 *Creator - kon8387*
 
