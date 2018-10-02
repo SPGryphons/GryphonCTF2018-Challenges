@@ -4,13 +4,11 @@
 
 I could have sworn I stored something in my repository, but I can't seem to find my repository or what I stored anywhere?
 
-
+*Creator - whoami*
 
 ### Hints (Optional)
 
 I am a fan of taking notes, are you?
-
-*Creator - whoami*
 
 
 ## Solution
