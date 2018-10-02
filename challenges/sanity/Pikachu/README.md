@@ -25,7 +25,7 @@ I choose you!
 
 ## Distribution
 * Pikachu.txt
-  * SHA1: b3e97dfe6c30a19ea92010ae9e551aa30b71bf47
+  * SHA1: `b3e97dfe6c30a19ea92010ae9e551aa30b71bf47`
 
 ## Solution
 Go to the following link:  
