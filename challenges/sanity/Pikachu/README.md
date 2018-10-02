@@ -21,7 +21,7 @@ I choose you!
 *Creator - Va1aR* 
 
 ## Hint
-* Pikachu
+Pikachu
 
 ## Distribution
 * Pikachu.txt
