@@ -4,11 +4,10 @@
 
 It's a barcode! It's in two dimensions! It's also broken!!!
 
-*Creator - exetr (Chuan Kai)*
+*Creator - @exetr (Chuan Kai)*
 
 ### Hints
 1. https://en.wikipedia.org/wiki/QR_code#/media/File:QRCode-2-Structure.png
-2. https://www.thonky.com/qr-code-tutorial/introduction
 
 ## Setup Guide
 1. Distribute file in `distrib`
