@@ -6,7 +6,7 @@ Try, try and try,
 The more I try, the more I cry  
 I practice math with my heart and soul,  
 Yet I am not able to achieve my goal.    
-Despite my great endeavors,  
+In spite of my great endeavors,  
 Fate is never in my favor.  
 "Math is great" is what others would say.  
 Yet, I hate it and wish it'd go away.  
