@@ -2,23 +2,14 @@
 
 ## Question Text
 
-We have managed to intercept the following images of stolen card numbers from a hacker.The flag seems to one of the card numbers..
+We have managed to intercept the following images of stolen card numbers from a hacker.The flag seems to one of the card numbers.However it seems like they are encrypted. 
 
-However it seems like they are encrypted. 
-
-Do your best to find the flag.
-
-## Disclaimer
-
-There are no spaces in the flag.
-
-All letters of the flag must be entered in caps.
+Things to note:There are no spaces in the flag & all letters of the flag must be entered in caps.
 
 *Creator - kon8387*
 
 ### Hints (Optional)
 1. The flag is within the range of 60 - 90 
-2. The letters are shifted by 8
 
 ## Distribution
 - CardNumbers.png
@@ -30,9 +21,11 @@ Optical Character Recognition aka OCR is a widely used technology that translate
 
 Instead of typing each letter out manually,use OCR(online/offline) software to translate the card numbers into machine readable text.
 
-The flag is in the 67th row.
+The flag is in the 67th row. `OKBN{KWUXC73Z_3G3}`
 
-slove.py uses pytesseract which needs to be installed before using.The script will tanslate any text on the image into machine readable text, decode the letters with a shift of -8 and search through the entire string for a substring starting with "GCTF{" and ending with "}".
+Offline method:solve.py uses pytesseract which needs to be installed before using.The script will tanslate any text on the image into machine readable text, decode the letters with a shift of -8 and search through the entire string for a substring starting with "GCTF{" and ending with "}".
+
+Online method:Use the site https://www.onlineocr.net/ to translate the image to text and use https://cryptii.com/pipes/caesar-cipher (or any other ceaser cipher decoder) to decode the flags with a shift of -8, the flag can be easily found using a simple search (ctrl + f).
 
 ### Flag
 `GCTF{COMPU73R_3Y3}`
