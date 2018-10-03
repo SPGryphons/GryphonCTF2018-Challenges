@@ -2,18 +2,17 @@
 
 ## Question Text
 
-Try, try and try, the more I try, the more I cry  
-I practice maths with my heart and soul,  
-yet I am not able to achieve my goal.  
-I never get marks in maths,  
-in spite of my great endeavors fate is never in my favor.  
-I really want to improve my maths, because I love this subject,  
-and for this, I am trying my level best.  
-I am candid so I confess, in mathematics examination I always create a mess,  
-all the answers I guess, and ultimately the marks I get are quite less.  
-I believe that if I do ample practice, I'll one day probably achieve my goal,  
-and I seriously have to improve,  
-because in our lives maths plays a very significant role.
+Try, try and try, 
+the more I try, the more I cry  
+I practice math with my heart and soul,  
+yet I am not able to achieve my goal.    
+Despite my great endeavors,
+fate is never in my favor.  
+"Math is great" - 
+is what others would say.
+Yet, I hate it and wish it'd go away.
+One thing does make me feel better,
+Now I can find the area of a feather
 
 
 *Creator - Va1aR (Joshua)*
