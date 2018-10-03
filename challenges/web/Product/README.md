@@ -3,11 +3,11 @@
 ## Question Text
 
 Try, try and try,  
-the more I try, the more I cry  
+The more I try, the more I cry  
 I practice math with my heart and soul,  
-yet I am not able to achieve my goal.    
+Yet I am not able to achieve my goal.    
 Despite my great endeavors,  
-fate is never in my favor.  
+Fate is never in my favor.  
 "Math is great" is what others would say.  
 Yet, I hate it and wish it'd go away.  
 One thing does make me feel better,  
