@@ -20,5 +20,10 @@ Looking into the files after unzipping the distributed zip file, one will notice
 
 To solve the challenge, program a script as offered in the [solution](../solution/Solution.java). The output will show 10 files matching the regex. Using either a sensible guess, or trial-and-error, the right flag will eventually be found.
 
+A far easier solution with a one-liner linux command is also available.
+``` sh
+grep -rnw 'forest/' -e '^GCTF{[a-Z0-9_]*}$'
+```
+
 ### Flag
 `GCTF{E7R3M3LY_H4RD_T0_F1ND_7H15_N3EDL3}`
