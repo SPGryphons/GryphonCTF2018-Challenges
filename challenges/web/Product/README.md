@@ -23,7 +23,7 @@ Now I can find the area of a feather
 ## Solution
 	
 This challenge requires the user to figure out the correct product,  
-The correct product is actually the resolution of the image 
+The correct product is actually the resolution of the image  
 After entering the correct product, they will be able to retrive the flag
 
 The user will see a multiplication table image when they are at index.jsp
