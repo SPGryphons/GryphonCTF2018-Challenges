@@ -9,7 +9,7 @@ yet I am not able to achieve my goal.
 Despite my great endeavors,
 fate is never in my favor.  
 "Math is great" - 
-is what others would say.
+is what others would say.  
 Yet, I hate it and wish it'd go away.
 One thing does make me feel better,
 Now I can find the area of a feather
