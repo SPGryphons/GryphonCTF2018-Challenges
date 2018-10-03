@@ -6,7 +6,7 @@ So I just found the photo of this bin. It's a very nice bin don't you think?
 *Creator - whoami*
 
 ## Hint
-I found a pillow in the bin too
+A snake and a PILlow in the bin
 
 ## Distribution
 * [trash.png](distrib/trash.png)
