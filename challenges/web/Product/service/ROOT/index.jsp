@@ -58,13 +58,13 @@ Creator: Va1aR (Joshua)
 
     <!-- Slide gallery -->
     <div class="jumbotron">
-    </div><!-- End Slide gallery -->
     
-    <!-- Content -->
-    <div class="container">
-      <h3 class="text-center">Welcome to the PRODUCT Challenge!</h3>
-      <p class="text-center">Your task is to find and enter PRODUCT to get the flag</p>
-    </div><!-- End Content -->
+    <h3 class="text-center">Welcome to the PRODUCT Challenge!</h3>
+      <p class="text-center">Your task is to find and enter the PRODUCT to get the flag</p>
+    
+    </div><!-- End Slide gallery -->
+
+
     
     <form action="checkAnswer.jsp">
 
