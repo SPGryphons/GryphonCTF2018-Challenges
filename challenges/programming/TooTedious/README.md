@@ -25,7 +25,7 @@ The flag is in the 67th row. `OKBN{KWUXC73Z_3G3}`
 
 Offline method:solve.py uses pytesseract which needs to be installed before using.The script will tanslate any text on the image into machine readable text, decode the letters with a shift of -8 and search through the entire string for a substring starting with "GCTF{" and ending with "}".
 
-Online method:Use the site https://www.onlineocr.net/ to translate the image to text and use https://cryptii.com/pipes/caesar-cipher (or any other ceaser cipher decoder) to decode the flags with a shift of -8, the flag can be easily found using a simple search (ctrl + f).
+Online method:Use the site https://www.onlineocr.net/ to translate the image to text and use https://cryptii.com/pipes/caesar-cipher (or any other caeser cipher decoder) to decode the flags with a shift of -8, the flag can be easily found using a simple search (ctrl + f).
 
 ### Flag
 `GCTF{COMPU73R_3Y3}`
