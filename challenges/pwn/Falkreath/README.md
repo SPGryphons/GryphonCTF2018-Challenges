@@ -4,6 +4,8 @@
 
 What is this useless service?
 
+`nc pwn.chal.gryphonctf.com 18403`
+
 *Creator - PotatoDrug*
 
 ## Setup Guide

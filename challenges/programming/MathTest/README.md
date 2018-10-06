@@ -4,6 +4,8 @@
 
 The challenge title says it all :)
 
+`nc prog.chal.gryphonctf.com 18300`
+
 *Creator - Noans*
 
 ### Hints (Optional)

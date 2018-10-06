@@ -4,6 +4,8 @@
 
 What's this amazing light?
 
+`http://web.chal.gryphonctf.com:18700`
+
 *Creator - PotatoDrug*
 
 ## Setup Guide
