@@ -4,6 +4,8 @@
 
 I found this treasure chest but I can't open it!!!
 
+`http://web.chal.gryphonctf.com:18701`
+
 *Creator - PotatoDrug*
 
 ### Hints (Optional)

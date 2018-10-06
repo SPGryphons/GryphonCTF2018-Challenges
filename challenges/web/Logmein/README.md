@@ -4,6 +4,8 @@
 
 Pardon the shitty website design
 
+`http://web.chal.gryphonctf.com:18703`
+
 *Creator - PotatoDrug*
 
 ## Setup Guide

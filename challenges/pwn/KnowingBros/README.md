@@ -6,6 +6,8 @@ I was too nice to you in SmashBros!!!
 
 Now you have to leak the address yourself.
 
+`nc pwn.chal.gryphonctf.com 18402`
+
 *Creator - PotatoDrug*
 
 ## Setup Guide
