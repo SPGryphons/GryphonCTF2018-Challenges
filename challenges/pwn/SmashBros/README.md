@@ -4,6 +4,8 @@
 
 Enabling no execute and ASLR should help me survive BOFs right?
 
+`nc pwn.chal.gryphonctf.com 18401`
+
 *Creator - PotatoDrug*
 
 ## Setup Guide

@@ -14,6 +14,7 @@ It's special to me
 It's exactly who I want to be!  
 What's my name?
 
+`http://misc.chal.gryphonctf.com:18200`
 
 *Creator - Va1aR (Joshua)*
 

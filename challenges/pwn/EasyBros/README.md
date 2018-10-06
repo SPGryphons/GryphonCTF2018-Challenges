@@ -4,6 +4,8 @@
 
 I turned off all protections just for you!
 
+`nc pwn.chal.gryphonctf.com 18400`
+
 *Creator - PotatoDrug*
 
 ### Hints (Optional)
