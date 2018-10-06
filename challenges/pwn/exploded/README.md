@@ -4,7 +4,7 @@
 
 Here's a program that I made. Seems like it works the way I want it to.
 
-`nc pwn2.chal.gryphonctf.com 18500`
+`nc pwn2.chal.gryphonctf.com 18404`
 
 *Creator - Noans*
 
