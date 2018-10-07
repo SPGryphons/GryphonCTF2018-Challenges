@@ -36,6 +36,22 @@ We can see that there is a salt and a hash.
 Then we proceed to using hashcat to crack the password: 
 ```.\hashcat64.exe -a 3 -m 20 .\hash_pass  --show```
 
+#### In the event pastebin post gets taken down:
+```
+Name: YuanKai Lam
+DOB: 01 April 2000
+Class: DISM/34
+Age: 18
+Nickname: KaiKai
+ 
+Crush: Apple Lim
+DOB: 04 April 2000
+Nickname: XiaoPingGuo
+ 
+Pet: Jonathan Lam
+```
+
+Password: kaikai10004
 
 ### Flag
-`GCTF{Secure}`
+`GCTF{L3ts_G0_H4v3_fun}`
