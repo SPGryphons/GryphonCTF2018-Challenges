@@ -3,14 +3,14 @@ package main
 import (
 	"bytes"
 	"crypto/md5"
-	"encoding/hex"
 	"fmt"
+	"os"
 )
 
 func checkPassword(salt, password string) bool {
-	hash := "f971c2ef7f1112bbb9ff0f26ad8fb17c"
+	hash := []byte{249, 113, 194, 239, 127, 17, 18, 187, 185, 255, 15, 38, 173, 143, 177, 124}
 
-	hashInByte, _ := hex.DecodeString(hash)
+	//hashInByte, _ := hex.DecodeString(hash)
 
 	data := []byte(salt + password)
 
@@ -18,7 +18,7 @@ func checkPassword(salt, password string) bool {
 
 	var hashByte []byte = dataHash[:]
 
-	if bytes.Compare(hashInByte, hashByte) == 0 {
+	if bytes.Compare(hash, hashByte) == 0 {
 		return true
 	} else {
 		return false
@@ -37,7 +37,7 @@ func main() {
 	// call encryption
 	userOut := checkPassword(SALT, userIn)
 	if userOut {
-		fmt.Printf("Welcome\n")
+		fmt.Println("Welcome", os.Getenv("FLAG"))
 	} else {
 		fmt.Printf("Try again\n")
 	}
