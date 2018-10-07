@@ -23,9 +23,11 @@ After the XOR function, the input values are compared with another array of byte
 ![Check Values](solution/check_value.png)
 
 Flag values after XOR
+
 ![Flag values](solution/flag_values.png)
 
 XOR values
+
 ![XOR values](solution/xor_values.png)
 
 Sample solution
