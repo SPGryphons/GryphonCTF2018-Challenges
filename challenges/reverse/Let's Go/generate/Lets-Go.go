@@ -1,27 +1,45 @@
 package main
 
 import (
+	"bytes"
+	"crypto/md5"
+	"encoding/hex"
 	"fmt"
 )
 
-// https://github.com/KyleBanks/XOREncryption/blob/master/Go/xor.go
-func EncryptDecrypt(input, key string) (output string) {
-	for i := range input {
-		output += string(input[i] ^ key[i%len(key)])
+func checkPassword(salt, password string) bool {
+	hash := "f971c2ef7f1112bbb9ff0f26ad8fb17c"
+
+	hashInByte, _ := hex.DecodeString(hash)
+
+	data := []byte(salt + password)
+
+	dataHash := md5.Sum(data)
+
+	var hashByte []byte = dataHash[:]
+
+	if bytes.Compare(hashInByte, hashByte) == 0 {
+		return true
+	} else {
+		return false
 	}
 
-	return output
 }
 
 func main() {
-	var FLAG string = "GCTF{G0_G0_G0}"
+	SALT := "qweadsasgwe"
 	var userIn string
 
-	fmt.Printf("Hello give me your key: ")
+	fmt.Printf("Password: ")
 	fmt.Scanln(&userIn)
 
 	fmt.Printf("You entered: %s\n", userIn)
 	// call encryption
-	userOut := EncryptDecrypt(FLAG, userIn)
-	fmt.Printf("This is the output: %s\n", userOut)
+	userOut := checkPassword(SALT, userIn)
+	if userOut {
+		fmt.Printf("Welcome\n")
+	} else {
+		fmt.Printf("Try again\n")
+	}
+
 }

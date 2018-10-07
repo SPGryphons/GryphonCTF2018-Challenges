@@ -2,43 +2,40 @@
 
 ## Question Text
 
-Lets Go
+Lets Go find the password!
 
+(please encapulate the password in GCTF{...} to submit)
 `nc rev.chal.gryphonctf.com 80`
 
 *Creator - lohkaimun99*
 
 ### Hints (Optional)
-1. The program is written in Go
+1. salty salty md5
 
 ## Setup Guide
-1. Run `./build.sh`
+1. Distribute Lets-Go
 
 ## Distribution
 - Let's Go
-    - SHA1: `1fe33c171d05763b68b52ddf4dd8f6fc13ae3b46`
+    - SHA1: `d224a274b6a2e40f79f13123c9b31b578a7255f0`
     - 64 Bit ELF
 
 ## Solution
+The program will ask for the password, which it will compute the some of the salt with md5.
 
-When accessed, the program ask the user to type in a key. (If the key is shorter than the FLAG it loops through)
-```
-Hello give me your key: <key>
-You entered: <key>
-This is the output: <output>
-```
+![alt text](solution/qns.png)
+
 
 We will look at the main function:
-![alt text](solution/main.png)
+![alt text](solution/salt.png)
 
-We can see that the function sym.main.EncryptDecrypt is called
-(code from: https://github.com/KyleBanks/XOREncryption/blob/master/Go/xor.go)
+and the check function:
+![alt text](solution/hash.png)
 
-Then by reversing the function, it might be too difficult to see the XOR operations. 
-However, the name EncryptDecrypt at the same function is a clue.
-
-Solution: run solution.go
+We can see that there is a salt and a hash.
+Then we proceed to using hashcat to crack the password: 
+```.\hashcat64.exe -a 3 -m 20 .\hash_pass  --show```
 
 
 ### Flag
-`GCTF{G0_G0_G0}`
+`GCTF{Secure}`
