@@ -4,7 +4,7 @@
 
 (っ•́｡•́)♪♬
 
-*Creator - PotatoDurg*
+*Creator - PotatoDrug*
 
 ## Distribution
 - Strippy
