@@ -4,6 +4,8 @@
 
 I am quite rusty with this :(
 
+`nc rev.chal.gryphonctf.com 18501`
+
 *Creator - PotatoDrug*
 
 ### Hints (Optional)

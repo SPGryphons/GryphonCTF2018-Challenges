@@ -4,6 +4,8 @@
 
 I hate injections...
 
+`http://web.chal.gryphonctf.com:18702`
+
 *Creator - PotatoDrug*
 
 ## Setup Guide
