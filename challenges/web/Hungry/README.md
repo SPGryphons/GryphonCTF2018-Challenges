@@ -4,7 +4,7 @@
 
 I'm hungry... My breakfast isn't exactly ready :(
 
-`http://san.chal.gryphonctf.com:18600`
+`http://web.chal.gryphonctf.com:18705`
 
 *Creator - Noans*
 
