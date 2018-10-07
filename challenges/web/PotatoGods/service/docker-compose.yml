@@ -1,0 +1,28 @@
+db:
+  image: mysql:latest
+  environment:
+    MYSQL_ROOT_PASSWORD: r00dpassw0rdyouaintsupposetolook
+    MYSQL_DATABASE: potatodb
+    MYSQL_USER: gctf
+    MYSQL_PASSWORD: gctf2018supersecurepassw0rd
+  expose:
+    - "20948"
+  volumes:
+   - ./db/initdb.sql:/docker-entrypoint-initdb.d/initdb.sql
+   - ./db/my.cnf:/etc/mysql/conf.d/my.cnf
+
+web:
+  image: tomcat:latest
+  # Environment variables do not appear to be getting loaded the first time Tomcat starts!
+  ports:
+   - "18704:8080"
+  environment:
+   MYSQL_USER: gctfuser
+   MYSQL_PASSWORD: gctf2018supersecurepassw0rd
+   MYSQL_URL: service_db_1
+   PORT_NUM: 20948
+   SCHEMA_NAMES: potatodb
+  volumes:
+   - ./tomcat/webapps:/usr/local/tomcat/webapps
+  links:
+    - db
