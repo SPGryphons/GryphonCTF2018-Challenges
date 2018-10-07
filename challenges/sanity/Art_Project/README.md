@@ -2,9 +2,9 @@
 
 ## Question Text
 
-The school holidays are almost over but I still haven’t completed my art project.
+The school holidays are almost over but I still havenâ€™t completed my art project.
 
-Rushing homework at the end of the holidays seems like tradition to me …
+Rushing homework at the end of the holidays seems like tradition to me â€¦
 
 The flag is somewhere amongst the uncompleted pictures, try your best to find it.
 
@@ -17,8 +17,8 @@ The flag is somewhere amongst the uncompleted pictures, try your best to find it
 - Art_Project.zip
     - SHA1: `4926705825A4B573D92B964CDABAFD4C61FAC6EE`
 
-## Generate
-Piet images generated from `http://wallach.netsoc.ie/Piet/textToPiet.html`.
+## Setup Guide
+1. Piet images generated from `http://wallach.netsoc.ie/Piet/textToPiet.html`.
 
 
 ## Solution
