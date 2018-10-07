@@ -1,8 +1,8 @@
-# Rusty
+# Let's Go
 
 ## Question Text
 
-I am quite rusty with this :(
+Lets Go
 
 `nc rev.chal.gryphonctf.com 80`
 
@@ -15,7 +15,7 @@ I am quite rusty with this :(
 1. Run `./build.sh`
 
 ## Distribution
-- rusty
+- Let's Go
     - SHA1: `1fe33c171d05763b68b52ddf4dd8f6fc13ae3b46`
     - 64 Bit ELF
 
