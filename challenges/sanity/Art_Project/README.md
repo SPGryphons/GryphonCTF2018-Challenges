@@ -17,6 +17,10 @@ The flag is somewhere amongst the uncompleted pictures, try your best to find it
 - Art_Project.zip
     - SHA1: `4926705825A4B573D92B964CDABAFD4C61FAC6EE`
 
+## Generate
+Piet images generated from `http://wallach.netsoc.ie/Piet/textToPiet.html`.
+
+
 ## Solution
 The colour borders around each image is actually a programming language called piet, piet is a programming language that uses colour pixels to write programs and scripts. Piet is an esoteric programming language so the order of changes in hue and darkness of a colour corresponds to a command executed by the programme. (Eg. push command = darker by 1)
 
