@@ -7,7 +7,7 @@ Has the developer left a standard password?
 Lets Go find the password!
 
 
-`nc rev.chal.gryphonctf.com 80`
+`nc rev.chal.gryphonctf.com 18502`
 
 *Creator - lohkaimun99*
 
