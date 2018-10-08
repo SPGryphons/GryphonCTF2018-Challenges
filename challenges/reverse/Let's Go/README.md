@@ -19,7 +19,7 @@ Lets Go find the password!
 
 ## Distribution
 - Let's Go
-    - SHA1: `6fc46d9146d7e9396c48e441fbe152dd645cc979`
+    - SHA1: `6b2cc35093ae3ae2e4005e5b0544fb192fa6621a`
     - 64 Bit ELF
 
 ## Solution
@@ -27,12 +27,12 @@ The program will ask for the password, which it will compute the some of the sal
 
 ![alt text](solution/qns.png)
 
+NOTE: There is a suspicious link.
+
 
 We will look at the main function:
 ![alt text](solution/salt.png)
 
-From the function list we can also see a getDetail function, which does not seems to be used, but has a interesting website:
-![alt text](solution/details.png)
 
 Finally, the check function which has a special location (main.statictmp_0):
 ![alt text](solution/hash.png)
