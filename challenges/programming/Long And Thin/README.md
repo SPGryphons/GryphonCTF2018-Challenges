@@ -9,6 +9,10 @@ Helppppppp! My image got squashed by a bulldozer. Please help me get back my bea
 ## Setup Guide
 Run `python generate.py` to generate the distrib image
 
+## Distribution
+- flag.png
+    - SHA1: `887a67f5eba1262b37c6c1e692e1f59bfebc862b`
+
 ## Solution
 
 Given that the height of the original image is 300px, we can deduce that the width is also 300px. Using Python Imaging Library, we can reimage the given image into a 300x300 pixels image, which will give us an image of a QR code. By scanning the qr code, the flag will be shown
