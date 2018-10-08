@@ -2,9 +2,11 @@
 
 ## Question Text
 
+We seem to have found a leaked executable from a system login program.
+Has the developer left a standard password? 
 Lets Go find the password!
 
-(please encapulate the password in GCTF{...} to submit)
+
 `nc rev.chal.gryphonctf.com 80`
 
 *Creator - lohkaimun99*
