@@ -9,4 +9,5 @@ client.sendall("n".encode())
 while 1:
 	c=client.recv(256).decode().strip()
 	print(c)
-	client.sendall(str(c).encode())
+	NoColour=c[5:-4] # this will remove the color encoding
+	client.sendall(str(c[5:-4]).encode())

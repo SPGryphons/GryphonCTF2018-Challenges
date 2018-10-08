@@ -2,8 +2,10 @@
 import socket, threading
 from random import *
 from threading import Timer
+GREEN = '\033[94m'
+END = '\033[0m'
 PORT= 30152
-start='''Welcome to the Fastest Hand in the West. Type 20 words in 1 minute to get the flag\nPress any button to start\n'''
+start='''Welcome to the Fastest Hand in the West. Type 300 words in 1 minute to get the flag\nPress any button to start\n'''
 def timeout():
     con.sendall("\n\n\nTimes up, Press Enter to see your score\n".encode())
 
@@ -31,7 +33,7 @@ def question(con,addr):
 					if not t.is_alive():
 						break
 					x=randint(0,len(wordlist)-1)
-					buf=wordlist[x]+'\n'
+					buf=GREEN+wordlist[x]+END+'\n'
 					con.sendall(buf.encode())
 					ans=str(wordlist[x]).lower().strip()
 					userAns=con.recv(100).decode().lower().strip()
@@ -42,7 +44,7 @@ def question(con,addr):
 						wrong+=1
 		buf="\nYou have typed "+str(correct)+" correct words per minute and "+str(wrong)+" wrong words\n"
 		con.sendall(buf.encode())
-		if correct>=20:
+		if correct>=300:
 			con.sendall("Here is your flag: GCTF{F457_F1N93R}\n".encode())
 		con.close()
 	except socket.timeout:
