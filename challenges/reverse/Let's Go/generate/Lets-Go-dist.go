@@ -39,7 +39,6 @@ func main() {
 
 	fmt.Printf("You entered: %s\n", userIn)
 	// call encryption
-	getDetails()
 	checkPassword(SALT, userIn)
 
 	fmt.Printf("Comparing not implemented... Access challenge server pls\n")

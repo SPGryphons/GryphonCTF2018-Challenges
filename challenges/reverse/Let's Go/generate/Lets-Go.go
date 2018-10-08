@@ -18,8 +18,6 @@ func checkPassword(salt, password string) bool {
 
 	var hashByte []byte = dataHash[:]
 
-	fmt.Printf("%v", dataHash)
-
 	if bytes.Compare(hash, hashByte) == 0 {
 		return true
 	} else {
@@ -39,7 +37,7 @@ func main() {
 	// call encryption
 	userOut := checkPassword(SALT, userIn)
 	if userOut {
-		fmt.Println("Welcome\n %s", os.Getenv("FLAG"))
+		fmt.Printf("Welcome\n%s", os.Getenv("FLAG"))
 	} else {
 		fmt.Printf("Try again\n")
 	}
