@@ -19,10 +19,9 @@ Now I can find the area of a feather
 
 ## Setup Guide
 
-Link:	`http://san.chal.gryphonctf.com:18201`
-
 1. Run `./build.sh` in the service directory.
 
+Link:	`http://san.chal.gryphonctf.com:18201`
 
 ## Solution
 	
