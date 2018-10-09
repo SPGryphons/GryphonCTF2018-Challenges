@@ -37,7 +37,7 @@ Doing a `curl web.chal.gryphonctf.com:18706`, we can see the following
 
 At the very bottom, the user agent string is printed, which is the direction towards solving this challenge. However, knowing which version of IE may require a bit of elbow grease.
 
-The version of IE which will result in the flag being printed is any version of Internet Explorer 4. While it cannot be downloaded and run (easily) anymore, you can modify the user agent string wtih curl.
+The version of IE which will result in the flag being printed is any version of Internet Explorer 4. While it cannot be downloaded and run (easily) anymore, you can modify the user agent string wtih curl. Do note that any version before 4 would also work.
 
 ```
 ~$ curl -A "Mozilla/4.0 (Compatible; MSIE 4.0)" http://web.chal.gryphonctf.com:18706
