@@ -80,7 +80,7 @@ Looking at the contents of memory at `0x0061fedb`, we see that a string.
     </tbody>
 </table>
 
-Let's try to de-obfuscate this with what we know. We need to flip the contents and deduct (1 + i * 10) as we iterate up the characters. Use [https://www.calculator.net/hex-calculator.html](Hex Calculator)
+Let's try to de-obfuscate this with what we know. We need to flip the contents and deduct (1 + i * 10) as we iterate up the characters. Use [Hex Calculator](https://www.calculator.net/hex-calculator.html).
 ```
 0x06 - 191 => 0x47
 0xf8 - 181 => 0x43
