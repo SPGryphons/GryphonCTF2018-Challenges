@@ -66,6 +66,8 @@ From here, let's try to find out what string our input is compared to. Jumping i
 
 Looking at the contents of memory at `0x0061fedb`, we see that a string.
 
+||
+---|---|---
 0061FEDB | 7E 3E 49 81 88 68 6E A6 86 B2 95 B3 C7 CC E4 12 | ~>Iˆhn¦†²•³ÇÌä
 0061FEEB | E7 FF F8 06 00                                  | çÿø.
 
