@@ -19,7 +19,7 @@ Lets Go find the password!
 
 ## Distribution
 - Let's Go
-    - SHA1: `6b2cc35093ae3ae2e4005e5b0544fb192fa6621a`
+    - SHA1: `0d850da9e323d6caf265dd55cc04b9b26737ebd3`
     - 64 Bit ELF
 
 ## Solution
