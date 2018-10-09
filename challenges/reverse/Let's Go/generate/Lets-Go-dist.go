@@ -37,7 +37,7 @@ func main() {
 	checkPassword(SALT, userIn)
 
 	if strings.TrimRight(userIn, "\n") == "https://pastebin.com/U6NLFqWJ" {
-    	fmt.Printf("Hey that's an interesting link.\n")
+		fmt.Printf("Hey that's an interesting link.\n")
 	}
 
 	fmt.Printf("Comparing not implemented... Access challenge server pls\n")
