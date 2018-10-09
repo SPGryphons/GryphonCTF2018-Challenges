@@ -27,10 +27,11 @@ The program will ask for the password, which it will compute the some of the sal
 
 ![alt text](solution/qns.png)
 
-NOTE: There is a suspicious link.
+Then, when reversing the executable you can see a suspicious link in the main function ```sym.main.main```:
+![alt text](solution/link.png)
 
 
-We will look at the main function:
+We will look further at the main function:
 ![alt text](solution/salt.png)
 
 
