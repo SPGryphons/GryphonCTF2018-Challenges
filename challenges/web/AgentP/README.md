@@ -4,6 +4,8 @@
 
 "He is a platypus, they don't do much."
 
+http://web.chal.gryphonctf.com:18706
+
 *Creator - @exetr (Chuan Kai)*
 
 ### Hints
@@ -15,7 +17,7 @@ Run `./build.sh`
 
 ## Solution
 
-Doing a `curl web.chal.gryphonctf.com:18706`, we can see the following
+Doing a `curl http://web.chal.gryphonctf.com:18706`, we can see the following
 
 ```
 <!DOCTYPE html>
