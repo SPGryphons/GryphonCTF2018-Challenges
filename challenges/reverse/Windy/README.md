@@ -16,25 +16,32 @@ It's a Windows executable. And it's not fun.
 
 ## Solution
 Running the program for the first time, we will see that it is a pretty simple application. It receives an input and gives a message based on the input it received.
+
 ![Running the program](solution/run.jpg)
 
 That doesn't really help us, so let's open the program on a Linux machine with Radare2 to see what's happening. Doing a function list with grep, we see that there are a couple of functions with `main` in its name.
+
 ![Listing main functions](solution/function_list.jpg)
 
 Fiddling around with the functions, we will eventually come to the actual `main` function of the program, which is `sym._main`. In `sym._main`, we have a couple of interesting stuff going on. We know, from running the program that the program prints "Gimme something:" and waits for a user input. Though beyond that, we have yet to figure out the inner workings of the program. However, with Radare2, we can see that after receiving user input, it calls a function called `obfuscate` before calling `strcmp`, likely on the results of obfuscate, with a string.
+
 ![Disassembly of main function](solution/interest_main.jpg)
 
 Now that we roughly know what's happening, let's open the program on Windows with a debugger (we're using OllDbg, recommendation courtesy of lohkaimun99). Starting off, let's set a few breakpoints. One at the start of the main method, at address `0x00401527`, one before the call to the obfuscate method at address `0x004015a2` and one before the call to `strcmp`, at address `0x4015a2`. This helps us figure out what the program is doing.
+
 ![Our breakpoints](solution/breakpoints.jpg)
 
 Next, let's run our program until it breaks at the obfuscate method (address: `0x004015a2`). We gave `Welcome` as input to our program.
+
 ![Stopping at obfuscate function](solution/run_breakobfs.jpg)
 
 Stepping into the obfuscate method, we see that there appears to be a looping structure, likely the bulk of the obfuscation function. So let's set a breakpoint at the start of the looping area, and try to manually run through it to see what's happening.
+
 ![Stopping at start of loop](solution/run_breakloop.jpg)
 
 Stepping through it, eventually we reach this point where we see the program load the first letter of our input `Welcome` into register `eax`. So it seems to be starting to do something with our input. In the next few lines, the program appears to move the character `W` into register `ebx`, and also loading a number of value `6` from the stack at address `ebp - 0xc` to the register `eax` and using that number to do a couple of operations such as doing a logical left and some addition, before finally adding `ebx` (containing the first letter `W`) and putting it in a memory location at `0x007318BE` (program also decrements the number previously loaded from the stack in `eax` and places it back to the stack). From here, we can guess that the obfuscation function processes each character in our input, does something to obfuscate them and puts them in memory at (`0x007318B8` - `0x007318BF`). While doing so, it also places the character it processes from front to back in the memory location. So a letter starting with `W` is processed, and loaded into the location (`0x007318B8` - `0x007318BF`) starting from `0x007318BE` - `0x007318B8`. Setting a break point at `0x401519`, let's see what happens to our string when the obfuscate function ends.  
 PS. `0x007318BF` is a null byte denoting end of strings.
+
 ![Processing user input in obfuscate function](solution/load_char.jpg)
 
 Finally, our input becomes the following. We also are able to see some patterns.
@@ -51,9 +58,10 @@ Loaded into memory
 
 0x007318B8|0x007318B9|0x007318BA|0x007318BB|0x007318BC|0x007318BD|0x007318BE|0x007318BF
 ---|---|---|---|---|---|---|---
-0x66|0x78|0x84|0x82|0x95|0x98|0x94
+0x66|0x78|0x84|0x82|0x95|0x98|0x94|0x00
 
 From here, let's try to find out what string our input is compared to. Jumping into the `strcmp` method, we see that our obfuscated `Welcome` string's address is loaded into register `edx`, while another string's address is loaded into register `ecx`.
+
 ![strcmp](solution/strcmp.jpg)
 
 Looking at the contents of memory at `0x0061fedb`, we see that a string.
