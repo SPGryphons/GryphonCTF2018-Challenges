@@ -77,7 +77,6 @@ Looking at the contents of memory at `0x0061fedb`, we see that a string.
             <td>0061FEEB</td>
             <td>E7 FF F8 06 00                                 </td>
             <td>çÿø.</td>
-        <tr>
     </tbody>
 </table>
 
