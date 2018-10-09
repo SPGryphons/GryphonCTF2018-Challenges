@@ -13,11 +13,13 @@ Yet, I hate it and wish it'd go away.
 One thing does make me feel better,  
 Now I can find the area of a feather
 
+`http://misc.chal.gryphonctf.com:18201`
 
 *Creator - Va1aR (Joshua)*
 
 
 ## Setup Guide
+
 1. Run `./build.sh` in the service directory.
 
 ## Solution
