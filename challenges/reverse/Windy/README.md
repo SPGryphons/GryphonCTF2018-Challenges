@@ -66,10 +66,20 @@ From here, let's try to find out what string our input is compared to. Jumping i
 
 Looking at the contents of memory at `0x0061fedb`, we see that a string.
 
-||
----|---|---
-0061FEDB | 7E 3E 49 81 88 68 6E A6 86 B2 95 B3 C7 CC E4 12 | ~>Iˆhn¦†²•³ÇÌä
-0061FEEB | E7 FF F8 06 00                                  | çÿø.
+<table>
+    <tbody>
+        <tr>
+            <td>0061FEDB</td>
+            <td>7E 3E 49 81 88 68 6E A6 86 B2 95 B3 C7 CC E4 12</td>
+            <td>~>Iˆhn¦†²•³ÇÌä</td>
+        <tr>
+        <tr>
+            <td>0061FEEB</td>
+            <td>E7 FF F8 06 00                                 </td>
+            <td>çÿø.</td>
+        <tr>
+    </tbody>
+</table>
 
 Let's try to de-obfuscate this with what we know. We need to flip the contents and deduct (1 + i * 10) as we iterate up the characters. Use [https://www.calculator.net/hex-calculator.html](Hex Calculator)
 ```
