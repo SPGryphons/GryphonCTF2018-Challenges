@@ -2,7 +2,7 @@
 
 ## Question Text
 
-I have intercepted this encrypted EMAIL message sent to Lupursregina, see if you can find any useful intel.
+I have intercepted this encrypted EMAIL message sent to Lupusregina, see if you can find any useful intel.
 
 *Creator - PotatoDrug*
 
