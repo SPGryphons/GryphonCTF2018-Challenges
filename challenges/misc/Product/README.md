@@ -21,7 +21,7 @@ Now I can find the area of a feather
 
 1. Run `./build.sh` in the service directory.
 
-Link:	`http://san.chal.gryphonctf.com:18201`
+Link:	`http://misc.chal.gryphonctf.com:18201`
 
 ## Solution
 	
