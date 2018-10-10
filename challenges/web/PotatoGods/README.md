@@ -10,7 +10,8 @@ I built this really amazing website for my favourite food, POTATOES! I'm veryyyy
 
 ### Hints (Optional)
 
-Injections are fun!
+Level 1 - Injections are fun!
+Level 2 - https://www.youtube.com/watch?v=ll09F5mVwb8
 
 
 
