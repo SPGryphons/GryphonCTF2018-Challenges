@@ -7,14 +7,6 @@ args = vars(parser.parse_args())
 
 def asciiToDecimal(msg):
     return int.from_bytes(bytearray(msg, 'ascii'), byteorder='big', signed=False)
-
-def find_c(states, p, a):
-    c = (states[1] - a * states[0]) % p
-    return c
- 
-def find_a(states, p):
-    a = (states[2] - states[1]) * gmpy2.invert(states[1] - states[0], p) % p
-    return a
  
 def lcg(seed, a, c, p):
     last = seed
@@ -40,11 +32,10 @@ states = []
 for i in range(3):
     states.append(asciiToDecimal(plaintext[i]) ^ struct.unpack('>I', content[i])[0])
 
-s = states[0]
-a = find_a(states, p)
-c = find_c(states, p, a)
+a = (states[2] - states[1]) * gmpy2.invert(states[1] - states[0], p) % p
+c = (states[1] - a * states[0]) % p
 
-prng = lcg(s, a, c, p)
+prng = lcg(states[0], a, c, p)
 
 decrypted = bytearray()
 for x in content:
