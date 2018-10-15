@@ -32,11 +32,10 @@ states = []
 for i in range(3):
     states.append(asciiToDecimal(plaintext[i]) ^ struct.unpack('>I', content[i])[0])
 
-s = states[0]
 a = (states[2] - states[1]) * gmpy2.invert(states[1] - states[0], p) % p
 c = (states[1] - a * states[0]) % p
 
-prng = lcg(s, a, c, p)
+prng = lcg(states[0], a, c, p)
 
 decrypted = bytearray()
 for x in content:
