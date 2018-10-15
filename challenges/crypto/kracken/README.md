@@ -6,6 +6,9 @@ The Kracken is growing restless
 
 *Creator - Noans*
 
+### Hints (Optional)
+1. It's a known plaintext attack
+
 ## Distribution
 - kraken.zip
     - SHA1: `6fce079efb841c12a0d16076f5bcdee4fe0eabc5`
