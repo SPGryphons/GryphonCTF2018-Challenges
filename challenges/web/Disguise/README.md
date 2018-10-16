@@ -8,6 +8,9 @@ What's this amazing light?
 
 *Creator - PotatoDrug*
 
+### Hint
+Is it actually a static site?
+
 ## Setup Guide
 Run `./build.sh`
 
