@@ -8,6 +8,9 @@ Pardon the shitty website design
 
 *Creator - PotatoDrug*
 
+### Hint
+The cookie is encrypted with AES-CBC
+
 ## Setup Guide
 1. Run `./build.sh`
 

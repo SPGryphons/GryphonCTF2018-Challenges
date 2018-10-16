@@ -6,6 +6,9 @@ What's in the Cosmos?
 
 *Creator - PotatoDrug*
 
+### Hint
+There are some suspicious spaces near the middle of the file
+
 ## Setup Guide
 1. Run `generate/generate.py -f generate/bd_ch1.txt -o distrib/Cosmos.txt -t 'GCTF{kO5MO5_15_4_F4NCy_Word}' -s 500`
 
